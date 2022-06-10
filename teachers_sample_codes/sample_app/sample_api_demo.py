@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 import requests
+import sys
 
 
 api_link = "https://api.ipify.org/?format=json"
@@ -16,7 +17,7 @@ window = sg.Window("Checking public IP.", app_layout, enable_close_attempted_eve
 while True:
     # poniższe wywołanie otwiera okno i wczytuje dane
     event, values = window.read()
-    # inny sposób sprawdzania - tu x nie spowoduje zniknięcia okna
+    # inny sposób sprawdzania — tu x nie spowoduje zniknięcia okna
     if event in (sg.WINDOW_CLOSE_ATTEMPTED_EVENT, "Exit") and sg.popup_yes_no('Do you really want to exit?') == 'Yes':
         print("Break and EXIT")
         break
@@ -36,7 +37,6 @@ while True:
         except:
             print("Some Error")
 
-
     # sprawdzamy naciśnięte przyciski
     if event == "Clear -OUTPUT-":
         window['-OUTPUT-'].update(value='')
@@ -45,5 +45,3 @@ while True:
 window.close()
 print("End of application")
 sys.exit()
-
-
