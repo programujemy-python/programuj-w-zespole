@@ -1,6 +1,6 @@
 actual_year = 2022
 birth = 1974
-my_name = "Adam Jurkiewicz"
+my_name = "Adam"
 
 print(f"Hi {my_name}, we'll try to compute your age ;-)")
 age = actual_year - birth
@@ -18,10 +18,11 @@ if my_name.endswith("a"):
         print(f"But your name: {my_name} is an exception - you are a man!")
 else:
     print("You probably are a man...")
+
 print("That is all - see you next time!")
 
 ####################################################################################
-# lista pobrana jako wynik funkcji i sprawdzamy czy serwer zgłasza się jako Apache
+# lista pobrana jako wynik funkcji i sprawdzamy, czy serwer zgłasza się jako Apache
 import urllib.request as ureq
 
 address = "https://abixedukacja.eu"
